@@ -32,7 +32,11 @@ x86/
 *.dylib
 *.dll
 
-# Static libraries
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
 *.lai
 *.la
 *.a
@@ -46,3 +50,6 @@ x86/
 # Logs
 *.log
 *.tlog
+
+# Debug info
+*.dwo
