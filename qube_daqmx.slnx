@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="qube_daqmx.vcxproj" />
+  <Project Path="qube_daqmx.vcxproj" Id="6dfeec38-98b7-4b90-8272-6c4248ac2a7a" />
 </Solution>

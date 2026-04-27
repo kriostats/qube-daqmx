@@ -105,10 +105,13 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>C:\Program Files\MySQL\MySQL Server 8.4\include;.\third_party\inih;.\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Program Files\MySQL\MySQL Server 8.4\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libmysql.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -127,7 +130,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="qube_daqmx.cpp" />
+    <ClCompile Include="src\Config.cpp" />
+    <ClCompile Include="src\database.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="third_party\inih\ini.c" />
+    <ClCompile Include="third_party\inih\INIReader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Config.h" />
+    <ClInclude Include="include\database.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
